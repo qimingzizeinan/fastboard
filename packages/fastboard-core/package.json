@@ -11,7 +11,8 @@
   "scripts": {
     "cleanup": "rimraf dist",
     "check": "tsc --noEmit",
-    "build": "tsup"
+    "build": "tsup",
+    "publish": "pnpm publish --access public"
   },
   "peerDependencies": {
     "@netless/window-manager": ">=1.0.0-canary.0",

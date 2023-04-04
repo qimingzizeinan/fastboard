@@ -17,7 +17,8 @@
     "check": "tsc --noEmit && svelte-check",
     "build": "tsup",
     "dev": "vite",
-    "test:ssr": "esbuild-dev test/ssr.ts"
+    "test:ssr": "esbuild-dev test/ssr.ts",
+    "publish": "pnpm publish --access public"
   },
   "peerDependencies": {
     "@netless/fastboard-core": "workspace:*"

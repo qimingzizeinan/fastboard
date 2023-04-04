@@ -11,7 +11,8 @@
     "build": "pnpm -r build",
     "build:ci": "pnpm --aggregate-output -r build",
     "cleanup": "pnpm -r cleanup",
-    "release": "esbuild-dev scripts/release.ts"
+    "release": "esbuild-dev scripts/release.ts",
+    "publish": "pnpm run release && node scripts/publish.js"
   },
   "devDependencies": {
     "@hyrious/esbuild-dev": "^0.9.0",
