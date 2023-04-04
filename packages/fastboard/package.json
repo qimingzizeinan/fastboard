@@ -14,7 +14,6 @@
     "build": "tsup",
     "dev": "vite"
   },
-  "private": "false",
   "peerDependencies": {
     "@netless/window-manager": ">=1.0.0-canary.0",
     "white-web-sdk": ">=2.16.0"
