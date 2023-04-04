@@ -7,6 +7,10 @@ export declare interface ToolbarProps {
   theme?: Theme;
   language?: Language;
   config?: ToolbarConfig;
+  list?: Array<{
+    content: string;
+    click: () => void;
+  }>;
 }
 
 declare class Toolbar extends SvelteComponentTyped<ToolbarProps> {}

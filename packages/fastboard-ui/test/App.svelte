@@ -64,6 +64,23 @@
       {language}
       config={{
         toolbar: {
+          list: [
+            {
+              type: "clicker",
+            },
+            {
+              type: "clear",
+            },
+            {
+              type: "eraser",
+            },
+            {
+              content: "<div>1</div>",
+              click: () => {
+                console.log("click");
+              },
+            },
+          ],
           apps: {
             enable: !hide_apps,
           },

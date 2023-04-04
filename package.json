@@ -18,7 +18,7 @@
     "@hyrious/esbuild-plugin-svelte": "^0.1.7",
     "@hyrious/rimraf": "^0.1.0",
     "@netless/window-manager": "^0.4.55",
-    "@sveltejs/vite-plugin-svelte": "2.0.2",
+    "@sveltejs/vite-plugin-svelte": "1",
     "@types/node": "^18.11.18",
     "@typescript-eslint/eslint-plugin": "^5.47.1",
     "@typescript-eslint/parser": "^5.47.1",
@@ -39,7 +39,7 @@
     "typedoc-plugin-markdown": "^3.14.0",
     "typescript": "^4.9.4",
     "vite": "^4.0.3",
-    "white-web-sdk": "^2.16.40"
+    "white-web-sdk": "^2.16.41"
   },
   "pnpm": {
     "overrides": {

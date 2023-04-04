@@ -9,8 +9,9 @@
   export let app: FastboardApp | null | undefined = null;
   export let theme: Theme = "light";
   export let language: Language = "en";
-  export let config: ToolbarConfig = {};
-
+  export let config: ToolbarConfig = {
+    list: [],
+  };
   const name = "fastboard-toolbar";
   const extra_height = (32 + 4 + 4) * 2;
 
@@ -38,6 +39,7 @@
       {computed_height}
       {scrollable}
       {hide_apps}
+      list={config?.list}
     />
   </div>
   <label class="{name}-handler {theme}">

@@ -28,7 +28,11 @@
   export let computed_height = 0;
   export let scrollable = false;
   export let hide_apps = false;
-
+  export let list: Array<{
+    content: string;
+    type: string;
+    click: () => void;
+  }>;
   const name = "fastboard-toolbar";
 
   let last_shape: Shape = "rectangle";
@@ -104,55 +108,142 @@
   </Button>
 {/if}
 <div class="{name}-scrollable" class:scrollable use:scrollHeight={scroll_height} use:scrollTop={top}>
-  <Button class="clicker" {...btn_props} on:click={clicker} content={c.clicker}>
-    {#if appliance === "clicker"}
-      <Icons.ClickFilled {theme} active />
-    {:else}
-      <Icons.Click {theme} />
-    {/if}
-  </Button>
-  <Button class="selector" {...btn_props} on:click={selector} content={c.selector}>
-    {#if appliance === "selector"}
-      <Icons.SelectorFilled {theme} active />
-    {:else}
-      <Icons.Selector {theme} />
-    {/if}
-  </Button>
-  <Button class="pencil" {...btn_props} on:click={pencil} content={c.pencil} menu={pencil_panel}>
-    {#if appliance === "pencil"}
-      <Icons.PencilFilled {theme} active />
-    {:else}
-      <Icons.Pencil {theme} />
-    {/if}
-  </Button>
-  <Button class="text" {...btn_props} on:click={text} content={c.text} menu={text_panel}>
-    {#if appliance === "text"}
-      <Icons.TextFilled {theme} active />
-    {:else}
-      <Icons.Text {theme} />
-    {/if}
-  </Button>
-  <Button class="shapes" {...btn_props} on:click={select_last_shape} content={t.shapes} menu={shapes_panel}>
-    {#if appliance === last_shape || (appliance === "shape" && shape === last_shape)}
-      <svelte:component this={shapesIconActive[last_shape]} {theme} active />
-    {:else}
-      <svelte:component this={shapesIcon[last_shape]} {theme} />
-    {/if}
-  </Button>
-  <Button class="eraser" {...btn_props} on:click={eraser} content={c.eraser}>
-    {#if appliance === "eraser"}
-      <Icons.EraserFilled {theme} active />
-    {:else}
-      <Icons.Eraser {theme} />
-    {/if}
-  </Button>
-  <Button class="clear" {...btn_props} on:click={clear} content={t.clear}>
-    <Icons.Clear {theme} />
-  </Button>
-  {#if !hide_apps}
-    <Button class="apps" {...btn_props} content={t.apps} menu={apps_panel} menu_placement="right-end">
-      <Icons.Apps {theme} />
+  {#if list && list.length > 0}
+    {#each list as item}
+      <!-- clicker -->
+      {#if item.type === "clicker"}
+        <Button class="clicker" {...btn_props} on:click={clicker} content={c.clicker}>
+          {#if appliance === "clicker"}
+            <Icons.ClickFilled {theme} active />
+          {:else}
+            <Icons.Click {theme} />
+          {/if}
+        </Button>
+
+        <!-- selector -->
+      {:else if item.type === "selector"}
+        <Button class="selector" {...btn_props} on:click={selector} content={c.selector}>
+          {#if appliance === "selector"}
+            <Icons.SelectorFilled {theme} active />
+          {:else}
+            <Icons.Selector {theme} />
+          {/if}
+        </Button>
+
+        <!-- pencil -->
+      {:else if item.type === "pencil"}
+        <Button class="pencil" {...btn_props} on:click={pencil} content={c.pencil} menu={pencil_panel}>
+          {#if appliance === "pencil"}
+            <Icons.PencilFilled {theme} active />
+          {:else}
+            <Icons.Pencil {theme} />
+          {/if}
+        </Button>
+
+        <!-- text -->
+      {:else if item.type === "text"}
+        <Button class="text" {...btn_props} on:click={text} content={c.text} menu={text_panel}>
+          {#if appliance === "text"}
+            <Icons.TextFilled {theme} active />
+          {:else}
+            <Icons.Text {theme} />
+          {/if}
+        </Button>
+
+        <!-- shapes -->
+      {:else if item.type === "shapes"}
+        <Button
+          class="shapes"
+          {...btn_props}
+          on:click={select_last_shape}
+          content={t.shapes}
+          menu={shapes_panel}
+        >
+          {#if appliance === last_shape || (appliance === "shape" && shape === last_shape)}
+            <svelte:component this={shapesIconActive[last_shape]} {theme} active />
+          {:else}
+            <svelte:component this={shapesIcon[last_shape]} {theme} />
+          {/if}
+        </Button>
+
+        <!-- eraser -->
+      {:else if item.type === "eraser"}
+        <Button class="eraser" {...btn_props} on:click={eraser} content={c.eraser}>
+          {#if appliance === "eraser"}
+            <Icons.EraserFilled {theme} active />
+          {:else}
+            <Icons.Eraser {theme} />
+          {/if}
+        </Button>
+
+        <!-- clear -->
+      {:else if item.type === "clear"}
+        <Button class="clear" {...btn_props} on:click={clear} content={t.clear}>
+          <Icons.Clear {theme} />
+        </Button>
+      {:else if item.content !== ""}
+        {@html item.content}
+        <!-- apps -->
+      {:else if item.type === "apps"}
+        {#if !hide_apps}
+          <Button class="apps" {...btn_props} content={t.apps} menu={apps_panel} menu_placement="right-end">
+            <Icons.Apps {theme} />
+          </Button>
+        {/if}
+      {/if}
+    {/each}
+  {:else}
+    1
+    <Button class="clicker" {...btn_props} on:click={clicker} content={c.clicker}>
+      {#if appliance === "clicker"}
+        <Icons.ClickFilled {theme} active />
+      {:else}
+        <Icons.Click {theme} />
+      {/if}
     </Button>
+    <Button class="selector" {...btn_props} on:click={selector} content={c.selector}>
+      {#if appliance === "selector"}
+        <Icons.SelectorFilled {theme} active />
+      {:else}
+        <Icons.Selector {theme} />
+      {/if}
+    </Button>
+    <Button class="pencil" {...btn_props} on:click={pencil} content={c.pencil} menu={pencil_panel}>
+      {#if appliance === "pencil"}
+        <Icons.PencilFilled {theme} active />
+      {:else}
+        <Icons.Pencil {theme} />
+      {/if}
+    </Button>
+    <Button class="text" {...btn_props} on:click={text} content={c.text} menu={text_panel}>
+      {#if appliance === "text"}
+        <Icons.TextFilled {theme} active />
+      {:else}
+        <Icons.Text {theme} />
+      {/if}
+    </Button>
+    <Button class="shapes" {...btn_props} on:click={select_last_shape} content={t.shapes} menu={shapes_panel}>
+      {#if appliance === last_shape || (appliance === "shape" && shape === last_shape)}
+        <svelte:component this={shapesIconActive[last_shape]} {theme} active />
+      {:else}
+        <svelte:component this={shapesIcon[last_shape]} {theme} />
+      {/if}
+    </Button>
+    <Button class="eraser" {...btn_props} on:click={eraser} content={c.eraser}>
+      {#if appliance === "eraser"}
+        <Icons.EraserFilled {theme} active />
+      {:else}
+        <Icons.Eraser {theme} />
+      {/if}
+    </Button>
+    <Button class="clear" {...btn_props} on:click={clear} content={t.clear}>
+      <Icons.Clear {theme} />
+    </Button>
+    {#if !hide_apps}
+      <Button class="apps" {...btn_props} content={t.apps} menu={apps_panel} menu_placement="right-end">
+        <Icons.Apps {theme} />
+      </Button>
+    {/if}
   {/if}
 </div>
 {#if scrollable}
