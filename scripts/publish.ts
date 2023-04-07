@@ -20,8 +20,13 @@ packageNames.forEach(packageName => {
     console.log(`${packageName} 是私有包，跳过发布。`);
     return;
   }
+  // console.log("packageDir", packageDir);
 
   // 执行发布命令
   console.log(`发布 ${packageName}...`);
-  execSync("pnpm run publish", { cwd: packageDir, stdio: "inherit" });
+  try {
+    execSync("pnpm run publish", { cwd: packageDir, stdio: "inherit" });
+  } catch (error) {
+    console.error(error);
+  }
 });
