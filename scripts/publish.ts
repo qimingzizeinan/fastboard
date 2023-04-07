@@ -1,8 +1,9 @@
-const { execSync } = require("child_process");
-const fs = require("fs");
+import { execSync } from "child_process";
+import fs from "fs";
+import path from "path";
 
 // 获取所有包的路径
-const packagesDir = "../packages";
+const packagesDir = path.join(__dirname, "../packages");
 const packageNames = fs.readdirSync(packagesDir);
 
 // 遍历所有包并执行发布命令
