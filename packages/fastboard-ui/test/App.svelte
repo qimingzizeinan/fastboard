@@ -13,6 +13,7 @@
 
   import PlayerControl from "../src/components/PlayerControl";
   import Slider from "../src/components/Toolbar/components/Slider.svelte";
+  import {} from "os";
 
   let app: FastboardApp | undefined;
   let player: FastboardPlayer | undefined;
@@ -62,13 +63,55 @@
 </script>
 
 <div class="flex">
-  <div class="container" use:resizable={{ defaultSize: { width: 480, height: 300 } }}>
+  <div class="container" use:resizable={{ defaultSize: { width: 880, height: 750 } }}>
     <Fastboard
       {app}
       {theme}
       {language}
       config={{
         toolbar: {
+          list: [
+            {
+              type: "freedom",
+            },
+            {
+              type: "selector",
+            },
+            {
+              type: "pencil",
+            },
+            {
+              type: "text",
+            },
+            {
+              type: "shapes",
+            },
+            {
+              type: "eraser",
+            },
+            {
+              type: "clear",
+            },
+            {
+              type: "courseware",
+              onClick: () => {
+                console.log("click courseware");
+              },
+            },
+            {
+              type: "share",
+              onClick: (shareActive, setShareActive) => {
+                if (shareActive) {
+                  console.log("click share 1", shareActive, setShareActive(false));
+                } else {
+                  console.log("click share 2", shareActive, setShareActive(true));
+                }
+              },
+            },
+            {
+              type: "apps",
+            },
+          ],
           apps: {
             enable: !hide_apps,
           },
@@ -76,6 +119,7 @@
             behavior: eraser,
           },
         },
+        bottom_layout: "electron",
       }}
     />
   </div>

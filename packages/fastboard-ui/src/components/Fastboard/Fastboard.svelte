@@ -14,7 +14,9 @@
   export let theme: Theme = "light";
   export let language: Language = "en";
   export let containerRef: ((element: HTMLDivElement | null) => void) | undefined = undefined;
-  export let config: FastboardUIConfig = {};
+  export let config: FastboardUIConfig = {
+    bottom_layout: "web",
+  };
 
   const name = "fastboard";
   const AppsShowToolbar = ["DocsViewer", "Slide"];
@@ -70,24 +72,51 @@
   }
 </script>
 
-<div class="{name}-root" class:loading={!app}>
+<div class="{name}-root js-{name}-root" class:loading={!app}>
   <div class="{name}-view" bind:this={container} on:touchstart|capture={focus_me} />
-  <div class="{name}-left" class:hidden={!(layout === "visible" || layout === "toolbar-only")}>
+  <div
+    class="{name}-right js-{name}-wrap"
+    class:hidden={!(layout === "visible" || layout === "toolbar-only")}
+  >
     {#if config.toolbar?.enable !== false}
       <Toolbar {app} {theme} {language} config={config.toolbar} />
     {/if}
   </div>
   <div class="{name}-bottom-left" class:hidden={layout !== "visible"}>
-    {#if config.redo_undo?.enable !== false}
-      <RedoUndo {app} {theme} {language} icons={config.redo_undo?.icons} />
-    {/if}
-    {#if config.zoom_control?.enable !== false}
-      <ZoomControl {app} {theme} {language} icons={config.zoom_control?.icons} />
+    {#if config.bottom_layout === "web"}
+      {#if config.redo_undo?.enable !== false}
+        <RedoUndo {app} {theme} {language} icons={config.redo_undo?.icons} />
+      {/if}
+      {#if config.zoom_control?.enable !== false}
+        <ZoomControl {app} {theme} {language} icons={config.zoom_control?.icons} />
+      {/if}
+    {:else if config.bottom_layout === "electron"}
+      {#if config.redo_undo?.enable !== false}
+        <RedoUndo {app} {theme} {language} icons={config.redo_undo?.icons} />
+      {/if}
+      {#if config.zoom_control?.enable !== false}
+        <ZoomControl {app} {theme} {language} icons={config.zoom_control?.icons} />
+      {/if}
+      {#if config.page_control?.enable !== false}
+        <PageControl {app} {theme} {language} icons={config.page_control?.icons} />
+      {/if}
     {/if}
   </div>
   <div class="{name}-bottom-right" class:hidden={layout !== "visible"}>
-    {#if config.page_control?.enable !== false}
-      <PageControl {app} {theme} {language} icons={config.page_control?.icons} />
+    {#if config.bottom_layout === "web"}
+      {#if config.page_control?.enable !== false}
+        <PageControl {app} {theme} {language} icons={config.page_control?.icons} />
+      {/if}
+    {:else if config.bottom_layout === "electron"}
+      {#if config.redo_undo?.enable !== false}
+        <RedoUndo {app} {theme} {language} icons={config.redo_undo?.icons} />
+      {/if}
+      {#if config.zoom_control?.enable !== false}
+        <ZoomControl {app} {theme} {language} icons={config.zoom_control?.icons} />
+      {/if}
+      {#if config.page_control?.enable !== false}
+        <PageControl {app} {theme} {language} icons={config.page_control?.icons} />
+      {/if}
     {/if}
   </div>
 </div>

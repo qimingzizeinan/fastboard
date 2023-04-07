@@ -28,6 +28,21 @@
   }
 }
 
+.fastboard-right {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 50px;
+  top: 8px;
+  right: 0;
+  z-index: 200;
+  pointer-events: none;
+
+  .fastboard-toolbar {
+    padding-right: 8px;
+  }
+}
+
 .fastboard-bottom-left {
   display: flex;
   gap: 10px;

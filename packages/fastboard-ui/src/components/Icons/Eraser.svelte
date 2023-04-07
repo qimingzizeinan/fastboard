@@ -5,46 +5,27 @@
   export let active = false;
 </script>
 
-<svg fill="none" viewBox="0 0 24 24" class="fastboard-icon {theme}" class:is-active={active}>
-  <path
-    d="M16 16L20 20M20 16L16 20"
-    stroke="#5D6066"
-    class="fastboard-icon-stroke-color"
-    stroke-width="1.25"
-  />
-  <path
-    d="M13.4139 4.92898C14.195 4.14794 15.4613 4.14794 16.2423 4.92898L19.0708 7.75741C19.8518 8.53846 19.8518 9.80479 19.0708 10.5858L11.9997 17.6569C10.4376 19.219 7.90494 19.219 6.34284 17.6569L4.92863 16.2427C4.14758 15.4616 4.14758 14.1953 4.92863 13.4143L13.4139 4.92898Z"
-    stroke="#5D6066"
-    class="fastboard-icon-stroke-color"
-    stroke-width="1.25"
-    stroke-linejoin="round"
-  />
-  <path
-    d="M12 6.34314L17.6569 12"
-    stroke="#5D6066"
-    class="fastboard-icon-stroke-color"
-    stroke-width="1.25"
-    stroke-linejoin="round"
-  />
-  <path
-    d="M16.2422 4.92896L13.4138 7.75738"
-    stroke="#5D6066"
-    class="fastboard-icon-stroke-color"
-    stroke-width="1.25"
-    stroke-linejoin="round"
-  />
-  <path
-    d="M17.6572 6.34314L14.8288 9.17157"
-    stroke="#5D6066"
-    class="fastboard-icon-stroke-color"
-    stroke-width="1.25"
-    stroke-linejoin="round"
-  />
-  <path
-    d="M19.0713 7.75732L16.2429 10.5858"
-    stroke="#5D6066"
-    class="fastboard-icon-stroke-color"
-    stroke-width="1.25"
-    stroke-linejoin="round"
-  />
+<svg
+  width="20"
+  height="20"
+  class="fastboard-icon {theme}"
+  class:is-active={active}
+  viewBox="0 0 20 20"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g id="&#230;&#169;&#161;&#231;&#154;&#174;">
+    <path
+      id="Rectangle 48"
+      d="M8.81708 3.66168C10.3792 2.09958 12.9118 2.09958 14.4739 3.66168L16.3385 5.52621C17.9006 7.08831 17.9006 9.62097 16.3385 11.1831L12.3526 15.1689C11.9621 15.5594 11.3289 15.5594 10.9384 15.1689L4.83123 9.06175C4.4407 8.67122 4.4407 8.03806 4.83123 7.64753L8.81708 3.66168Z"
+      stroke="#222222"
+      stroke-width="1.5"
+    />
+    <path
+      id="Rectangle 49"
+      d="M4.59375 8.82471L11.175 15.4059L10.2427 16.3382C8.6806 17.9003 6.14794 17.9003 4.58584 16.3382L3.66148 15.4138C2.09938 13.8517 2.09939 11.3191 3.66148 9.75697L4.59375 8.82471Z"
+      stroke="#222222"
+      stroke-width="1.5"
+    />
+  </g>
 </svg>

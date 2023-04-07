@@ -14,6 +14,7 @@
 
   const name = "fastboard-toolbar";
   const extra_height = (32 + 4 + 4) * 2;
+  $: toolBarList = config?.list || [];
 
   $: writable = app?.writable;
   $: disabled = !$writable;
@@ -41,9 +42,11 @@
       {scrollable}
       {hide_apps}
       {eraser_type}
+      {toolBarList}
     />
   </div>
-  <label class="{name}-handler {theme}">
+  <!-- 收起、展开 -->
+  <!-- <label class="{name}-handler {theme}">
     <input type="checkbox" bind:checked={collapsed} />
     <svg width="17" height="42" viewBox="0 0 17 42" fill="none">
       <path
@@ -70,5 +73,5 @@
         />
       {/if}
     </svg>
-  </label>
+  </label> -->
 </div>

@@ -71,7 +71,11 @@ $name: "fastboard-toolbar";
 }
 
 .#{$name}-btn {
-  @include btn(32px, 4px, 8px);
+  @include btn(60px, 0px, 8px);
+  display: block;
+  font-size: 12px;
+  color: #969dac;
+  margin-bottom: 18px;
 }
 
 @import "./components/Slider.scss";

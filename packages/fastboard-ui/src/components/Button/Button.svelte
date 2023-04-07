@@ -34,7 +34,7 @@
       >
         <slot />
       </button>
-      <span class="{name}-triangle" />
+      <!-- <span class="{name}-triangle" /> -->
     </span>
   {:else}
     <button

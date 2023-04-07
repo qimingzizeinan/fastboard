@@ -5,16 +5,25 @@
   export let active = false;
 </script>
 
-<svg fill="none" viewBox="0 0 24 24" class="fastboard-icon {theme}" class:is-active={active}>
-  <rect
-    width="16"
-    height="16"
-    x="4"
-    y="4"
-    stroke="#5D6066"
-    stroke-linejoin="round"
-    stroke-width="1.75"
-    rx="8"
-    class="fastboard-icon-stroke-color"
-  />
+<svg
+  width="20"
+  height="20"
+  class="fastboard-icon {theme}"
+  class:is-active={active}
+  viewBox="0 0 20 20"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g id="&#229;&#156;&#134;&#229;&#189;&#162;">
+    <rect
+      id="Rectangle 13102"
+      x="2.5"
+      y="2.5"
+      width="15"
+      height="15"
+      rx="7.5"
+      stroke="#1890FF"
+      stroke-width="1.5"
+    />
+  </g>
 </svg>

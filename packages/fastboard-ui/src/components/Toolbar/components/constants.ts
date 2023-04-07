@@ -24,7 +24,7 @@ export const shapes = [
   "speechBalloon",
 ] as const;
 
-export type Shape = typeof shapes[number];
+export type Shape = (typeof shapes)[number];
 
 export const applianceShapes = shapes.slice(0, 4) as Appliance[];
 
@@ -52,7 +52,7 @@ export const shapesIconActive: Record<Shape, any> = {
 
 export const erasers = ["eraser", "pencilEraser"] as const;
 
-export type Eraser = typeof erasers[number];
+export type Eraser = (typeof erasers)[number];
 
 export const eraserIcon: Record<Eraser, any> = {
   eraser: Icons.Eraser,
@@ -65,7 +65,18 @@ export const eraserIconActive: Record<Eraser, any> = {
 };
 
 export const i18n: I18nData<
-  "clicker" | "selector" | "pencil" | "pencilEraser" | "text" | "shapes" | "eraser" | "clear" | "apps"
+  | "clicker"
+  | "selector"
+  | "pencil"
+  | "pencilEraser"
+  | "text"
+  | "shapes"
+  | "eraser"
+  | "clear"
+  | "apps"
+  | "courseware"
+  | "share"
+  | "more"
 > = {
   en: {
     clicker: "clicker",
@@ -77,17 +88,23 @@ export const i18n: I18nData<
     shapes: "shapes",
     clear: "clear",
     apps: "apps",
+    courseware: "courseware",
+    share: "share",
+    more: "more",
   },
   "zh-CN": {
     clicker: "点击",
-    selector: "选择",
-    pencil: "铅笔",
+    selector: "选中",
+    pencil: "画笔",
     eraser: "橡皮",
     pencilEraser: "板擦",
     text: "文字",
     shapes: "形状",
     clear: "清屏",
     apps: "Apps",
+    courseware: "课件",
+    share: "共享屏幕",
+    more: "更多",
   },
 };
 

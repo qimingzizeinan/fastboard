@@ -5,12 +5,26 @@
   export let active = false;
 </script>
 
-<svg fill="none" viewBox="0 0 24 24" class="fastboard-icon {theme}" class:is-active={active}>
-  <path
-    stroke="#5D6066"
-    stroke-linejoin="round"
-    stroke-width="1.25"
-    d="M5 19 15.5 8.5M17 12l2-7-7 2 3.5 1.5L17 12Z"
-    class="fastboard-icon-stroke-color"
-  />
+<svg
+  width="20"
+  height="20"
+  class="fastboard-icon {theme}"
+  class:is-active={active}
+  viewBox="0 0 20 20"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g id="&#228;&#184;&#137;&#232;&#167;&#146;&#229;&#189;&#162;" clip-path="url(#clip0_1193_9064)">
+    <path
+      id="Polygon 11"
+      d="M10 3.19995L17.7942 16.7H2.20577L10 3.19995Z"
+      stroke="#222222"
+      stroke-width="1.5"
+    />
+  </g>
+  <defs>
+    <clipPath id="clip0_1193_9064">
+      <rect width="20" height="20" fill="white" />
+    </clipPath>
+  </defs>
 </svg>

@@ -13,6 +13,12 @@ $name: "fastboard-toolbar";
   }
 }
 
+.#{$name} {
+  .mt8 {
+    margin-top: 8px;
+  }
+}
+
 .#{$name}-btn-interactive {
   position: relative;
 }
@@ -76,12 +82,16 @@ $name: "fastboard-toolbar";
   width: 136px;
 }
 
-// .#{$name}-panel-btns {
-//   // min-width: 108px;
+.#{$name}-panel-btns {
+  display: flex;
+  .fastboard-toolbar-btn {
+    width: 32px;
+  }
+  // min-width: 108px;
 
-//   // .#{$name}-btn {
-//   // }
-// }
+  // .#{$name}-btn {
+  // }
+}
 
 .#{$name}-colors,
 .#{$name}-shapes {
@@ -176,4 +186,18 @@ $name: "fastboard-toolbar";
       color: read($theme, "color");
     }
   }
+}
+
+.active-wrap {
+  min-height: 22px;
+}
+
+.panel-icon {
+  width: 20px;
+}
+
+.free-move {
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
 }

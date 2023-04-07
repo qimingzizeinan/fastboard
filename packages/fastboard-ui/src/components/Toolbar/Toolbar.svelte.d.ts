@@ -2,7 +2,31 @@ import type { FastboardApp } from "@netless/fastboard-core";
 import type { Theme, Language } from "../../typings";
 import { SvelteComponentTyped } from "svelte";
 
+export declare type ToolbarItem = {
+  type:
+    | "clicker"
+    | "eraser"
+    | "pencil"
+    | "text"
+    | "shape"
+    | "image"
+    | "audio"
+    | "video"
+    | "file"
+    | "selector"
+    | "shapes"
+    | "apps"
+    | "custom"
+    | "courseware"
+    | "share"
+    | "freedom"
+    | "clear";
+  content?: string;
+  onClick?: (...data: any[]) => void;
+};
+
 export declare interface ToolbarConfig {
+  list?: ToolbarItem[];
   apps?: {
     enable?: boolean;
   };

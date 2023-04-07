@@ -5,11 +5,32 @@
   export let active = false;
 </script>
 
-<svg fill="none" viewBox="0 0 24 24" class="fastboard-icon {theme}" class:is-active={active}>
-  <path fill="#5D6066" d="m14 5 6 4-6 4 2-4-2-4Z" class="fastboard-icon-fill-color" />
-  <path
-    fill="#5D6066"
-    d="M8 8.375h8v1.25H8v-1.25Zm0 8h12v1.25H8v-1.25ZM3.375 13A4.625 4.625 0 0 1 8 8.375v1.25A3.375 3.375 0 0 0 4.625 13h-1.25Zm1.25 0A3.375 3.375 0 0 0 8 16.375v1.25A4.625 4.625 0 0 1 3.375 13h1.25Z"
-    class="fastboard-icon-fill-color"
-  />
+<svg
+  width="20"
+  height="21"
+  class="fastboard-icon {theme}"
+  class:is-active={active}
+  viewBox="0 0 20 21"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g id="&#228;&#184;&#139;&#228;&#184;&#128;&#230;&#173;&#165;">
+    <path
+      id="Vector"
+      d="M15.5701 9.00647L18.1301 6.44647L15.5701 3.88647"
+      stroke="#616773"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      id="Vector_2"
+      d="M14.87 16.5066H6.87C4.11 16.5066 1.87 14.2666 1.87 11.5066C1.87 8.74659 4.11 6.50659 6.87 6.50659H17.87"
+      stroke="#616773"
+      stroke-width="1.5"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </g>
 </svg>

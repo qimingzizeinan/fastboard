@@ -3,6 +3,8 @@
 
   export let theme: Theme = "light";
   export let active = false;
+
+  // import ClickIcon from "./images/click/normal.png"
 </script>
 
 <svg fill="none" viewBox="0 0 24 24" class="fastboard-icon {theme}" class:is-active={active}>

@@ -5,14 +5,31 @@
   export let active = false;
 </script>
 
-<svg fill="none" viewBox="0 0 24 24" class="fastboard-icon {theme}" class:is-active={active}>
-  <path
-    stroke="#5D6066"
-    stroke-dasharray="1.25 1.25"
-    stroke-linejoin="round"
-    stroke-width="1.25"
-    d="M18 11V4H4v14h7"
-    class="fastboard-icon-stroke-color"
-  />
-  <path fill="#5D6066" d="m15 20-2-7 7 2-3.5 1.5L15 20Z" class="fastboard-icon-fill-color" />
-</svg>
+<div class="icon-wrap">
+  <svg
+    width="20"
+    height="20"
+    class="fastboard-icon {theme}"
+    class:is-active={active}
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      id="&#233;&#128;&#137;&#228;&#184;&#173;&#239;&#188;&#136;&#233;&#128;&#137;&#228;&#184;&#173;&#239;&#188;&#137;"
+    >
+      <g
+        id="&#233;&#128;&#137;&#228;&#184;&#173;&#239;&#188;&#136;&#233;&#128;&#137;&#228;&#184;&#173;&#239;&#188;&#137;_2"
+      >
+        <path
+          id="Vector"
+          d="M5.35455 14.5116L2.83253 6.94554C1.70116 3.55142 3.55142 1.70116 6.94554 2.83253L14.5116 5.35454C19.6027 7.0516 19.5969 9.827 14.5116 11.5182L12.9795 12.0249C12.5906 12.1546 12.1604 12.5847 12.0308 12.9736L11.5182 14.5116C9.827 19.5969 7.04571 19.5969 5.35455 14.5116Z"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </g>
+    </g>
+  </svg>
+</div>

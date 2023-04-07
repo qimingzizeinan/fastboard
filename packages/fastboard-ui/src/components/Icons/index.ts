@@ -46,6 +46,10 @@ import WhiteboardAdd from "./WhiteboardAdd.svelte";
 import Play from "./Play.svelte";
 import Pause from "./Pause.svelte";
 import Loading from "./Loading.svelte";
+import Courseware from "./Courseware.svelte";
+import CoursewareFilled from "./CoursewareFilled.svelte";
+import Share from "./Share.svelte";
+import ShareFilled from "./ShareFilled.svelte";
 
 const Icons = {
   Apps,
@@ -55,6 +59,10 @@ const Icons = {
   BalloonBolded,
   Circle,
   CircleBolded,
+  Share,
+  ShareFilled,
+  Courseware,
+  CoursewareFilled,
   Clear,
   Click,
   ClickFilled,
