@@ -32,14 +32,28 @@
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: 50px;
+  bottom: 60px;
   top: 8px;
-  right: 0;
   z-index: 200;
   pointer-events: none;
 
-  .fastboard-toolbar {
-    padding-right: 8px;
+  &.desktop-right {
+    right: 8px;
+    .fastboard-toolbar {
+      width: 70px;
+    }
+  }
+  &.desktop-left {
+    left: 8px;
+    .fastboard-toolbar {
+      width: 70px;
+    }
+  }
+  &.web-left {
+    left: 8px;
+    .fastboard-toolbar {
+      width: 70px;
+    }
   }
 }
 

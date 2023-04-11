@@ -10,6 +10,7 @@
   export let app: FastboardApp | null | undefined = null;
   export let theme: Theme = "light";
   export let language: Language = "en";
+  export let platform: "web" | "electron" = "web";
   export let config: ToolbarConfig = {};
 
   const name = "fastboard-toolbar";
@@ -33,6 +34,7 @@
 <div class="{name} {theme}" class:collapsed use:height={container_height}>
   <div class="{name}-contents {theme}" style:height={scrollable ? computed_height + "px" : "auto"}>
     <Contents
+      {platform}
       {app}
       {theme}
       {language}

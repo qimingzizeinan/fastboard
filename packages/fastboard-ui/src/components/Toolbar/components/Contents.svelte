@@ -20,11 +20,12 @@
   import PencilEraserSize from "./PencilEraserSize.svelte";
   import TextColor from "./TextColor.svelte";
   import Shapes from "./Shapes.svelte";
-  import useToolbarDrag from "./useToolbarDrag";
+  // import useToolbarDrag from "./useToolbarDrag";
 
   import {} from "os";
   import type { ToolbarItem } from "..";
 
+  export let platform: "web" | "electron" = "web";
   export let app: FastboardApp | null | undefined = null;
   export let theme: Theme = "light";
   export let language: Language = "en";
@@ -36,7 +37,7 @@
   export let eraser_type: "delete" | "pencil" | "both" = "both";
   export let toolBarList: ToolbarItem[];
 
-  useToolbarDrag();
+  // useToolbarDrag();
 
   const name = "fastboard-toolbar";
 
@@ -301,6 +302,20 @@
             <div class="mt8">{t.more}</div>
           </Button>
         {/if}
+      {:else if item.type === "desktop-change" && platform === "electron"}
+        <Button
+          class="desktop-change"
+          {...btn_props}
+          content={t.apps}
+          on:click={() => {
+            const classList = document.querySelector(".js-tool-bar-change")?.classList;
+            if (!classList) return;
+            classList.toggle("desktop-right");
+            classList.toggle("desktop-left");
+          }}
+        >
+          <Icons.Change {theme} />
+        </Button>
       {:else if item.type === "custom"}
         {#if item.content}
           {@html item.content}

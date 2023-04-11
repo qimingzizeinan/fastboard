@@ -72,9 +72,6 @@
         toolbar: {
           list: [
             {
-              type: "freedom",
-            },
-            {
               type: "selector",
             },
             {
@@ -111,6 +108,9 @@
             {
               type: "apps",
             },
+            {
+              type: "desktop-change",
+            },
           ],
           apps: {
             enable: !hide_apps,
@@ -119,7 +119,7 @@
             behavior: eraser,
           },
         },
-        bottom_layout: "electron",
+        platform: "electron",
       }}
     />
   </div>

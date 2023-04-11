@@ -20,7 +20,8 @@ export declare type ToolbarItem = {
     | "courseware"
     | "share"
     | "freedom"
-    | "clear";
+    | "clear"
+    | "desktop-change";
   content?: string;
   onClick?: (...data: any[]) => void;
 };
@@ -45,6 +46,7 @@ export declare interface ToolbarProps {
   theme?: Theme;
   language?: Language;
   config?: ToolbarConfig;
+  platform?: "web" | "electron";
 }
 
 declare class Toolbar extends SvelteComponentTyped<ToolbarProps> {}

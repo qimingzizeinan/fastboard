@@ -2,6 +2,7 @@
 // @ts-nocheck
 
 import Apps from "./Apps.svelte";
+import Change from "./Change.svelte";
 import Arrow from "./Arrow.svelte";
 import ArrowBolded from "./ArrowBolded.svelte";
 import Balloon from "./Balloon.svelte";
@@ -53,6 +54,7 @@ import ShareFilled from "./ShareFilled.svelte";
 
 const Icons = {
   Apps,
+  Change,
   Arrow,
   ArrowBolded,
   Balloon,

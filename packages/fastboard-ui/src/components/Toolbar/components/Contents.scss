@@ -12,6 +12,13 @@ $name: "fastboard-toolbar";
     margin: 2px 4px;
   }
 }
+.fastboard-right.desktop-right,
+.fastboard-right.desktop-left {
+  .#{$name}-contents {
+    position: absolute;
+    bottom: 10px;
+  }
+}
 
 .#{$name} {
   .mt8 {
@@ -39,7 +46,7 @@ $name: "fastboard-toolbar";
 
 .#{$name}-scrollable {
   padding: 2px 4px;
-  overflow: hidden;
+  // overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -200,4 +207,10 @@ $name: "fastboard-toolbar";
   text-align: center;
   cursor: pointer;
   user-select: none;
+}
+
+.desktop-change {
+  position: absolute;
+  bottom: -16px;
+  margin-bottom: 0;
 }

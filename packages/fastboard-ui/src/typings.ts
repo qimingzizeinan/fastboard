@@ -38,7 +38,7 @@ export interface FastboardUIConfig {
     enable?: boolean;
     icons?: PageControlProps["icons"];
   };
-  bottom_layout: "web" | "electron";
+  platform: "web" | "electron";
 }
 
 export interface ReplayFastboardUIConfig {
