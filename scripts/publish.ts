@@ -6,8 +6,7 @@ import path from "path";
 const packagesDir = path.join(__dirname, "../packages");
 const packageNames = fs.readdirSync(packagesDir);
 
-// 遍历所有包并执行发布命令
-packageNames.forEach(packageName => {
+async function publish(packageName) {
   const packageDir = `${packagesDir}/${packageName}`;
   // 判断是否是文件夹
   if (!fs.statSync(packageDir).isDirectory()) {
@@ -29,4 +28,8 @@ packageNames.forEach(packageName => {
   } catch (error) {
     console.error(error);
   }
-});
+}
+
+for (const item of packageNames) {
+  await publish(item);
+}
