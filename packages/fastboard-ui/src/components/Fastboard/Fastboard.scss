@@ -36,7 +36,9 @@
   top: 8px;
   z-index: 200;
   pointer-events: none;
-
+  &.hidden {
+    display: none;
+  }
   &.desktop-right {
     right: 8px;
     .fastboard-toolbar {

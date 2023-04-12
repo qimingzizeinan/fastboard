@@ -282,6 +282,7 @@
       {:else if item.type === "share"}
         <Button
           class="share"
+          active={shareActive}
           {...btn_props}
           on:click={() => {
             item.onClick?.(shareActive, setShareActive);
