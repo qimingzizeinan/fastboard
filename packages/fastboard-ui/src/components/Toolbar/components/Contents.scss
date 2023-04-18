@@ -46,7 +46,7 @@ $name: "fastboard-toolbar";
 
 .#{$name}-scrollable {
   padding: 2px 4px;
-  // overflow: hidden;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -213,4 +213,15 @@ $name: "fastboard-toolbar";
   position: absolute;
   bottom: -16px;
   margin-bottom: 0;
+}
+.scroll-down {
+  position: relative;
+  top: -10px;
+}
+.scroll-up,
+.scroll-down {
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 }
