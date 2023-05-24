@@ -304,7 +304,7 @@
           </Button>
         {/if}
       {:else if item.type === "desktop-change" && platform === "electron"}
-        <Button
+        <!-- <Button
           class="desktop-change"
           {...btn_props}
           content={t.apps}
@@ -316,7 +316,7 @@
           }}
         >
           <Icons.Change {theme} />
-        </Button>
+        </Button> -->
       {:else if item.type === "custom"}
         {#if item.content}
           {@html item.content}
