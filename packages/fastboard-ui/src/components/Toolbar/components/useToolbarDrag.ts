@@ -19,7 +19,7 @@ export default function useToolbarDrag({
     const draggable = document.querySelector(draggableClass)! as HTMLElement;
     const container = document.querySelector(dragAreaClass)! as HTMLElement;
     const boundary = document.querySelector(boundaryClass)! as HTMLElement;
-
+    if (!draggable || !container || !boundary) return
     // 记录鼠标按下时的位置
     let dragStartX = 0;
     let dragStartY = 0;

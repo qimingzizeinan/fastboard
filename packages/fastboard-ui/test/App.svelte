@@ -76,9 +76,9 @@
             //   content:
             //     "<img class='js-free-move' style='width: 100%;height: 20px;' src='https://lantuxuetang.oss-cn-beijing.aliyuncs.com/static/course-detail.png'>",
             // },
-            {
-              type: "freedom"
-            },
+            // {
+            //   type: "freedom"
+            // },
             {
               type: "selector",
             },
