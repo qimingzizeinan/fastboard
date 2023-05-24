@@ -19,7 +19,7 @@ export default function useToolbarDrag({
     const draggable = document.querySelector(draggableClass)! as HTMLElement;
     const container = document.querySelector(dragAreaClass)! as HTMLElement;
     const boundary = document.querySelector(boundaryClass)! as HTMLElement;
-    if (!draggable || !container || !boundary) return
+    if (!draggable || !container || !boundary) return;
     // 记录鼠标按下时的位置
     let dragStartX = 0;
     let dragStartY = 0;
@@ -48,8 +48,8 @@ export default function useToolbarDrag({
       containerOffsetY = transformMatrix.m42;
 
       // 绑定鼠标移动和松开事件
-      document.addEventListener("mousemove", handleMouseMove);
-      document.addEventListener("mouseup", handleMouseUp);
+      document.addEventListener("touchmove", handleMouseMove);
+      document.addEventListener("touchend", handleMouseUp);
     };
 
     // 鼠标移动时的事件处理函数
@@ -99,12 +99,12 @@ export default function useToolbarDrag({
     // 鼠标松开时的事件处理函数
     const handleMouseUp = () => {
       // 解绑鼠标移动和松开事件
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseup", handleMouseUp);
+      document.removeEventListener("touchmove", handleMouseMove);
+      document.removeEventListener("touchend", handleMouseUp);
     };
 
     // 绑定鼠标按下事件
-    draggable.addEventListener("mousedown", handleMouseDown);
+    draggable.addEventListener("touchstart", handleMouseDown);
   }
 
   onMount(init);
