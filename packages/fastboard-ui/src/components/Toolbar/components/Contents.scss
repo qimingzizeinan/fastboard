@@ -207,6 +207,13 @@ $name: "fastboard-toolbar";
   text-align: center;
   cursor: pointer;
   user-select: none;
+  padding: 6px 0;
+  position: absolute;
+  left: 24px;
+  top: -30px;
+}
+.toolbar-divider {
+  height: 10px;
 }
 
 .desktop-change {

@@ -92,14 +92,7 @@
       <Toolbar {app} {theme} {language} {platform} config={config.toolbar} />
     {/if}
   </div>
-  <div
-    class="{name}-left {position} js-tool-bar-change"
-    class:hidden={!(layout === "visible" || layout === "toolbar-only")}
-  >
-    {#if config.toolbar?.enable !== false}
-      <Toolbar {app} {theme} {language} {platform} config={config.toolbar} />
-    {/if}
-  </div>
+
   <div class="{name}-bottom-left" class:hidden={layout !== "visible"}>
     {#if config.platform === "web"}
       {#if config.redo_undo?.enable !== false}

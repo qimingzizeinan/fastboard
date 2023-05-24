@@ -11,7 +11,7 @@ interface DragOptions {
 }
 export default function useToolbarDrag({
   draggableClass = ".js-free-move",
-  dragAreaClass = ".js-fastboard-wrap .fastboard-toolbar-contents",
+  dragAreaClass = ".fastboard-toolbar-contents",
   boundaryClass = ".js-fastboard-root",
 }: DragOptions = {}) {
   function init() {
@@ -66,9 +66,9 @@ export default function useToolbarDrag({
       const newContainerOffsetX = containerOffsetX + dragOffsetX;
       const newContainerOffsetY = containerOffsetY + dragOffsetY;
 
-      if (newContainerOffsetY < 0) {
-        return;
-      }
+      // if (newContainerOffsetY < 0) {
+      //   return;
+      // }
 
       // 获取移动范围的边界坐标
       const boundaryRect = boundary.getBoundingClientRect();
@@ -77,23 +77,23 @@ export default function useToolbarDrag({
       const boundaryTop = boundaryRect.top;
       const boundaryRight = boundaryRect.right - containerRect.width;
       const boundaryBottom = boundaryRect.bottom - containerRect.height;
-
-      // 如果容器在边界的左侧，且鼠标向左移动，则停止移动
-      if (newContainerOffsetX <= boundaryLeft && event.clientX < lastMouseX) {
-        container.style.transform = `translate(${boundaryLeft}px, ${newContainerOffsetY}px)`;
-        // 如果容器在边界的右侧，且鼠标向右移动，则停止移动
-      } else if (newContainerOffsetX >= boundaryRight && event.clientX > lastMouseX) {
-        container.style.transform = `translate(${boundaryRight}px, ${newContainerOffsetY}px)`;
-        // 如果容器在边界的上方，且鼠标向上移动，则停止移动
-      } else if (newContainerOffsetY <= boundaryTop && event.clientY < lastMouseY) {
-        container.style.transform = `translate(${newContainerOffsetX}px, ${boundaryTop}px)`;
-        // 如果容器在边界的下方，且鼠标向下移动，则停止移动
-      } else if (newContainerOffsetY >= boundaryBottom && event.clientY > lastMouseY) {
-        container.style.transform = `translate(${newContainerOffsetX}px, ${boundaryBottom}px)`;
-        // 否则，容器随着鼠标移动
-      } else {
-        container.style.transform = `translate(${newContainerOffsetX}px, ${newContainerOffsetY}px)`;
-      }
+      container.style.transform = `translate(${newContainerOffsetX}px, ${newContainerOffsetY}px)`;
+      // // 如果容器在边界的左侧，且鼠标向左移动，则停止移动
+      // if (newContainerOffsetX <= boundaryLeft && event.clientX < lastMouseX) {
+      //   container.style.transform = `translate(${boundaryLeft}px, ${newContainerOffsetY}px)`;
+      //   // 如果容器在边界的右侧，且鼠标向右移动，则停止移动
+      // } else if (newContainerOffsetX >= boundaryRight && event.clientX > lastMouseX) {
+      //   container.style.transform = `translate(${boundaryRight}px, ${newContainerOffsetY}px)`;
+      //   // 如果容器在边界的上方，且鼠标向上移动，则停止移动
+      // } else if (newContainerOffsetY <= boundaryTop && event.clientY < lastMouseY) {
+      //   container.style.transform = `translate(${newContainerOffsetX}px, ${boundaryTop}px)`;
+      //   // 如果容器在边界的下方，且鼠标向下移动，则停止移动
+      // } else if (newContainerOffsetY >= boundaryBottom && event.clientY > lastMouseY) {
+      //   container.style.transform = `translate(${newContainerOffsetX}px, ${boundaryBottom}px)`;
+      //   // 否则，容器随着鼠标移动
+      // } else {
+      //   container.style.transform = `translate(${newContainerOffsetX}px, ${newContainerOffsetY}px)`;
+      // }
     };
 
     // 鼠标松开时的事件处理函数

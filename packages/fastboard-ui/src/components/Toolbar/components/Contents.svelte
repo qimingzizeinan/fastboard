@@ -20,7 +20,7 @@
   import PencilEraserSize from "./PencilEraserSize.svelte";
   import TextColor from "./TextColor.svelte";
   import Shapes from "./Shapes.svelte";
-  // import useToolbarDrag from "./useToolbarDrag";
+  import useToolbarDrag from "./useToolbarDrag";
 
   import {} from "os";
   import type { ToolbarItem } from "..";
@@ -37,7 +37,7 @@
   export let eraser_type: "delete" | "pencil" | "both" = "both";
   export let toolBarList: ToolbarItem[];
 
-  // useToolbarDrag();
+  useToolbarDrag();
 
   const name = "fastboard-toolbar";
 
@@ -134,7 +134,9 @@
     <Icons.Up {theme} />
   </Button>
 {/if}
+
 <div class="{name}-scrollable" class:scrollable use:scrollHeight={scroll_height} use:scrollTop={top}>
+  <div class="toolbar-divider"></div>
   {#if toolBarList.length > 0}
     {#each toolBarList as item}
       {#if item.type === "clicker"}
@@ -153,7 +155,9 @@
           <div class="mt8">{t.clicker}</div>
         </Button>
       {:else if item.type === "freedom"}
-        <div class="free-move js-free-move">自由移动</div>
+        <div class="free-move js-free-move">
+          <Icons.Drag {theme} />
+        </div>
       {:else if item.type === "selector"}
         <Button
           class="selector"
@@ -304,7 +308,7 @@
           </Button>
         {/if}
       {:else if item.type === "desktop-change" && platform === "electron"}
-        <!-- <Button
+        <Button
           class="desktop-change"
           {...btn_props}
           content={t.apps}
@@ -316,7 +320,7 @@
           }}
         >
           <Icons.Change {theme} />
-        </Button> -->
+        </Button>
       {:else if item.type === "custom"}
         {#if item.content}
           {@html item.content}

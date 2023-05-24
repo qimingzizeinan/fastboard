@@ -51,9 +51,11 @@ import Courseware from "./Courseware.svelte";
 import CoursewareFilled from "./CoursewareFilled.svelte";
 import Share from "./Share.svelte";
 import ShareFilled from "./ShareFilled.svelte";
+import Drag from "./Drag.svelte";
 
 const Icons = {
   Apps,
+  Drag,
   Change,
   Arrow,
   ArrowBolded,
