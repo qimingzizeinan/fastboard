@@ -5,7 +5,7 @@ import type {
   FastboardApp,
   MemberState,
   ShapeType,
-} from "@netless/fastboard-core";
+} from "@zhltc/fastboard-core";
 import type { Readable } from "svelte/store";
 import { derived, get, writable } from "svelte/store";
 

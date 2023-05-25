@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-  import type { FastboardPlayer } from "@netless/fastboard-core";
+  import type { FastboardPlayer } from "@zhltc/fastboard-core";
   import type { GenericIcon, I18nData, IconType, Language, Theme } from "../../typings";
 
   const speeds = [2.0, 1.5, 1.25, 1.0, 0.75, 0.5];

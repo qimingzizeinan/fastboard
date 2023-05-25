@@ -1,7 +1,7 @@
 {
   "name": "@zhltc/fastboard-ui",
   "version": "1.0.0-canary.21",
-  "description": "The front-end of @netless/fastboard-core.",
+  "description": "The front-end of @zhltc/fastboard-core.",
   "main": "src/index.ts",
   "svelte": "dist/index.svelte.mjs",
   "files": [
@@ -21,14 +21,14 @@
     "publish": "pnpm publish --access public"
   },
   "peerDependencies": {
-    "@netless/fastboard-core": "workspace:*"
+    "@zhltc/fastboard-core": "workspace:*"
   },
   "dependencies": {
     "tippy.js": "^6.3.7"
   },
   "devDependencies": {
-    "@netless/esbuild-plugin-inline-sass": "workspace:*",
-    "@netless/fastboard-core": "workspace:*"
+    "@zhltc/esbuild-plugin-inline-sass": "workspace:*",
+    "@zhltc/fastboard-core": "workspace:*"
   },
   "publishConfig": {
     "main": "dist/index.js",

@@ -1,5 +1,5 @@
 import { defineConfig } from "tsup";
-import { sass } from "@netless/esbuild-plugin-inline-sass";
+import { sass } from "@zhltc/esbuild-plugin-inline-sass";
 import { main } from "./package.json";
 
 export default defineConfig([

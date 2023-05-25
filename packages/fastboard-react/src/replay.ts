@@ -1,6 +1,6 @@
-import type { FastboardPlayer, FastboardReplayOptions } from "@netless/fastboard-core";
+import type { FastboardPlayer, FastboardReplayOptions } from "@zhltc/fastboard-core";
 
-import { replayFastboardCore } from "@netless/fastboard-core";
+import { replayFastboardCore } from "@zhltc/fastboard-core";
 import { registerDefaultApps, registerSlide } from "./behaviors/netless-app";
 
 /**

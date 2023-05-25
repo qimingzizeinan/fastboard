@@ -1,4 +1,4 @@
-import type { Appliance, Color } from "@netless/fastboard-core";
+import type { Appliance, Color } from "@zhltc/fastboard-core";
 import type { I18nData } from "../../../typings";
 import Icons from "../../Icons";
 
@@ -24,7 +24,7 @@ export const shapes = [
   "speechBalloon",
 ] as const;
 
-export type Shape = (typeof shapes)[number];
+export type Shape = typeof shapes[number];
 
 export const applianceShapes = shapes.slice(0, 4) as Appliance[];
 
@@ -52,7 +52,7 @@ export const shapesIconActive: Record<Shape, any> = {
 
 export const erasers = ["eraser", "pencilEraser"] as const;
 
-export type Eraser = (typeof erasers)[number];
+export type Eraser = typeof erasers[number];
 
 export const eraserIcon: Record<Eraser, any> = {
   eraser: Icons.Eraser,

@@ -1,4 +1,4 @@
-import type { FastboardApp, FastboardPlayer } from "@netless/fastboard-core";
+import type { FastboardApp, FastboardPlayer } from "@zhltc/fastboard-core";
 import type { FastboardProps, ReplayFastboardProps } from "../components/Fastboard";
 
 import { Fastboard, ReplayFastboard } from "../components/Fastboard";

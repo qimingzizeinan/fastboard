@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { FastboardApp } from "@netless/fastboard-core";
+  import type { FastboardApp } from "@zhltc/fastboard-core";
   import type { Language, Theme } from "../../typings";
   import type { ToolbarConfig } from ".";
   import { writable as svelte_writable } from "svelte/store";

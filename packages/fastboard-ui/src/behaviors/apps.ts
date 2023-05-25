@@ -1,4 +1,4 @@
-import type { FastboardApp } from "@netless/fastboard-core";
+import type { FastboardApp } from "@zhltc/fastboard-core";
 // import code_editor_svg from "./icons/visual-studio-code.svg";
 // import geogebra_svg from "./icons/geogebra.svg";
 // import countdown_svg from "./icons/countdown.svg";

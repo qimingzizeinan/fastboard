@@ -1,6 +1,6 @@
-import type { ToolbarProps } from "@netless/fastboard-ui";
+import type { ToolbarProps } from "@zhltc/fastboard-ui";
 
-import { Toolbar as ToolbarImpl } from "@netless/fastboard-ui";
+import { Toolbar as ToolbarImpl } from "@zhltc/fastboard-ui";
 import { wrapReactComponent } from "../hooks";
 
 export type { ToolbarProps };

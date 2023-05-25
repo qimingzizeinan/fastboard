@@ -1,6 +1,6 @@
-import type { FastboardApp, FastboardOptions } from "@netless/fastboard-core";
+import type { FastboardApp, FastboardOptions } from "@zhltc/fastboard-core";
 
-import { createFastboardCore } from "@netless/fastboard-core";
+import { createFastboardCore } from "@zhltc/fastboard-core";
 import { registerDefaultApps, registerSlide } from "./behaviors/netless-app";
 
 /**

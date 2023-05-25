@@ -2,7 +2,7 @@ import type { FastboardUIConfig, Language, Theme } from "..";
 
 import React, { useCallback, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
-import { resizable } from "@netless/fastboard-ui/test/resizable";
+import { resizable } from "@zhltc/fastboard-ui/test/resizable";
 import { Fastboard, stockedApps, useFastboard } from "../src";
 import "./style.scss";
 

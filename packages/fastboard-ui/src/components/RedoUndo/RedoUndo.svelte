@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-  import type { FastboardApp } from "@netless/fastboard-core";
+  import type { FastboardApp } from "@zhltc/fastboard-core";
   import type { GenericIcon, I18nData, IconType, Language, Theme } from "../../typings";
   const i18n: I18nData<"redo" | "undo"> = {
     en: {

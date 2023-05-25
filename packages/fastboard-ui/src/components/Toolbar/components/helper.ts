@@ -1,4 +1,4 @@
-import type { HotKey } from "@netless/fastboard-core";
+import type { HotKey } from "@zhltc/fastboard-core";
 import { append, attr, element } from "svelte/internal";
 
 /**

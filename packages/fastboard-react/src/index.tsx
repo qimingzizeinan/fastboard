@@ -1,7 +1,7 @@
 import "./style.scss";
 
-export * from "@netless/fastboard-core";
-export { stockedApps } from "@netless/fastboard-ui";
+export * from "@zhltc/fastboard-core";
+export { stockedApps } from "@zhltc/fastboard-ui";
 export type {
   Theme,
   Language,
@@ -9,7 +9,7 @@ export type {
   AppInToolbar,
   AppsInToolbar,
   FastboardUIConfig,
-} from "@netless/fastboard-ui";
+} from "@zhltc/fastboard-ui";
 export * from "./components/RedoUndo";
 export * from "./components/ZoomControl";
 export * from "./components/PageControl";

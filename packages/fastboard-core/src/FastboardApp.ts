@@ -641,13 +641,13 @@ export async function createFastboardCore<TEventData extends Record<string, any>
 
   const room = await sdk.joinRoom(
     {
-      floatBar: true,
-      disableEraseImage: true,
-      hotKeys,
+      // floatBar: true,
+      // disableEraseImage: true,
+      // hotKeys,
       ...ensureOfficialPlugins(joinRoomParams),
-      useMultiViews: true,
+      // useMultiViews: true,
       disableNewPencil: false,
-      disableMagixEventDispatchLimit: true,
+      // disableMagixEventDispatchLimit: true,
     },
     callbacks
   );

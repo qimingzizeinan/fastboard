@@ -1,6 +1,6 @@
-## @netless/fastboard-ui
+## @zhltc/fastboard-ui
 
-The front-end of [@netless/fastboard-core](https://github.com/netless-io/fastboard/tree/main/packages/fastboard-core).
+The front-end of [@zhltc/fastboard-core](https://github.com/netless-io/fastboard/tree/main/packages/fastboard-core).
 
 ### License
 

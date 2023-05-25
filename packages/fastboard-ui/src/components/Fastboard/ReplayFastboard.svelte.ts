@@ -1,4 +1,4 @@
-import type { FastboardPlayer } from "@netless/fastboard-core";
+import type { FastboardPlayer } from "@zhltc/fastboard-core";
 import type { Language, ReplayFastboardUIConfig, Theme } from "../../typings";
 import { SvelteComponentTyped } from "svelte";
 

@@ -11,7 +11,7 @@ This project uses [svelte](https://svelte.dev), and is publishing two files:
 **dist/index.mjs**: Including svelte itself, ready for use in vanilla js.
 
 ```js
-import { Toolbar } from "@netless/fastboard-ui";
+import { Toolbar } from "@zhltc/fastboard-ui";
 
 new Toolbar({ target: document.body });
 ```
@@ -20,7 +20,7 @@ new Toolbar({ target: document.body });
 
 ```svelte
 <script>
-import { Toolbar } from "@netless/fastboard-ui";
+import { Toolbar } from "@zhltc/fastboard-ui";
 </script>
 
 <Toolbar />

@@ -4,7 +4,7 @@ import type {
   FastboardOptions,
   FastboardPlayer,
   FastboardReplayOptions,
-} from "@netless/fastboard-core";
+} from "@zhltc/fastboard-core";
 import type { DependencyList, EffectCallback, FunctionComponent } from "react";
 import type { SvelteComponent as SvelteComponentType } from "svelte";
 

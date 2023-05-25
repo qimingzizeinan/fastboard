@@ -1,15 +1,15 @@
-## @netless/fastboard-core
+## @zhltc/fastboard-core
 
 A tiny wrapper of white-web-sdk and @netless/window-manager.
 
-Used by [@netless/fastboard-ui](https://github.com/netless-io/fastboard/tree/main/packages/fastboard-ui).
+Used by [@zhltc/fastboard-ui](https://github.com/netless-io/fastboard/tree/main/packages/fastboard-ui).
 
 ### Usage
 
 > **Warning**: This package is not intended to be used directly. You should use @netless/fastboard or @netless/fastboard-react instead.
 
 ```ts
-import { FastboardApp } from "@netless/fastboard-core";
+import { FastboardApp } from "@zhltc/fastboard-core";
 
 let sdk = new WhiteWebSdk();
 let room = await sdk.joinRoom({ hotKeys });
@@ -34,14 +34,14 @@ await app.destroy();
 ### Advanced Usage
 
 ```ts
-import { addRoomListener } from "@netless/fastboard-core";
+import { addRoomListener } from "@zhltc/fastboard-core";
 
 const stopListen = addRoomListener(room, "onKeyDown", event => {
   console.log("keydown", event.key);
   stopListen();
 });
 
-import { createVal } from "@netless/fastboard-core";
+import { createVal } from "@zhltc/fastboard-core";
 
 const writable = createVal(
   // initial value

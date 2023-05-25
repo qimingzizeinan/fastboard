@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Color, FastboardApp } from "@netless/fastboard-core";
+  import type { Color, FastboardApp } from "@zhltc/fastboard-core";
   import type { Theme } from "../../../typings";
   import { colorKeys, colors } from "./constants";
 

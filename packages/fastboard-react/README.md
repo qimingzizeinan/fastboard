@@ -1,6 +1,6 @@
 ## @netless/fastboard-react
 
-The React wrapper of [@netless/fastboard-ui](https://github.com/netless-io/fastboard/tree/main/packages/fastboard-ui).
+The React wrapper of [@zhltc/fastboard-ui](https://github.com/netless-io/fastboard/tree/main/packages/fastboard-ui).
 
 ## Usage
 

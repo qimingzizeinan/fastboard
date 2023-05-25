@@ -1,4 +1,4 @@
-import type { FastboardApp } from "@netless/fastboard-core";
+import type { FastboardApp } from "@zhltc/fastboard-core";
 import type { Theme, Language } from "../../typings";
 import { SvelteComponentTyped } from "svelte";
 

@@ -1,6 +1,6 @@
 import { defineConfig } from "tsup";
 import { svelte } from "@hyrious/esbuild-plugin-svelte";
-import { sass } from "@netless/esbuild-plugin-inline-sass";
+import { sass } from "@zhltc/esbuild-plugin-inline-sass";
 
 export default defineConfig({
   entry: ["src/index.ts"],

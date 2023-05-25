@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { FastboardApp } from "@netless/fastboard-core";
+  import type { FastboardApp } from "@zhltc/fastboard-core";
   import type { Theme } from "../../../typings";
   import Slider from "./Slider.svelte";
 

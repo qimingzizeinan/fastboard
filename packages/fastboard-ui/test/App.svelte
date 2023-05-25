@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { FastboardApp, FastboardPlayer } from "@netless/fastboard-core";
+  import type { FastboardApp, FastboardPlayer } from "@zhltc/fastboard-core";
   import type { Language, Theme } from "../src";
   import type { MockApp } from "./mock-app";
   import { onMount } from "svelte";

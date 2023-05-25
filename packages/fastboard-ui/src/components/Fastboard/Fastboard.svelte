@@ -1,7 +1,7 @@
 <svelte:options immutable />
 
 <script lang="ts">
-  import type { FastboardApp } from "@netless/fastboard-core";
+  import type { FastboardApp } from "@zhltc/fastboard-core";
   import type { Language, Theme, FastboardUIConfig } from "../../typings";
   import { onMount } from "svelte";
   import { tippy_hide_all } from "../../actions/tippy";

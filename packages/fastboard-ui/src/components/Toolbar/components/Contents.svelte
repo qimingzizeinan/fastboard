@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Appliance, FastboardApp } from "@netless/fastboard-core";
+  import type { Appliance, FastboardApp } from "@zhltc/fastboard-core";
   import type { Writable } from "svelte/store";
   import type { Placement } from "tippy.js";
   import type { Language, Theme } from "../../../typings";
@@ -136,7 +136,7 @@
 {/if}
 
 <div class="{name}-scrollable" class:scrollable use:scrollHeight={scroll_height} use:scrollTop={top}>
-  <div class="toolbar-divider"></div>
+  <div class="toolbar-divider" />
   {#if toolBarList.length > 0}
     {#each toolBarList as item}
       {#if item.type === "clicker"}

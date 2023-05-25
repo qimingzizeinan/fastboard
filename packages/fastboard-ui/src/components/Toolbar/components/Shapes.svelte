@@ -27,7 +27,7 @@
 </script>
 
 <script lang="ts">
-  import type { Appliance, FastboardApp, HotKey } from "@netless/fastboard-core";
+  import type { Appliance, FastboardApp, HotKey } from "@zhltc/fastboard-core";
   import { tippy } from "../../../actions/tippy";
   import { shapes, shapesIcon, shapesIconActive, applianceShapes } from "./constants";
   import { tooltip } from "./helper";

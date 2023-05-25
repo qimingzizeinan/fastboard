@@ -1,7 +1,7 @@
 import "./style.scss";
 
-export * from "@netless/fastboard-core";
-export * from "@netless/fastboard-ui";
+export * from "@zhltc/fastboard-core";
+export * from "@zhltc/fastboard-ui";
 
 export * from "./behaviors";
 export * from "./create";

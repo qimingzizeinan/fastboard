@@ -1,4 +1,4 @@
-import type { FastboardPlayer, PlayerPhase, PlayerSeekingResult } from "@netless/fastboard-core";
+import type { FastboardPlayer, PlayerPhase, PlayerSeekingResult } from "@zhltc/fastboard-core";
 import type { Writable } from "svelte/store";
 import { get, writable } from "svelte/store";
 

@@ -1,6 +1,6 @@
-import type { ZoomControlProps } from "@netless/fastboard-ui";
+import type { ZoomControlProps } from "@zhltc/fastboard-ui";
 
-import { ZoomControl as ZoomControlImpl } from "@netless/fastboard-ui";
+import { ZoomControl as ZoomControlImpl } from "@zhltc/fastboard-ui";
 import { wrapReactComponent } from "../hooks";
 
 export type { ZoomControlProps };

@@ -1,6 +1,6 @@
-import type { FastboardProps, ReplayFastboardProps } from "@netless/fastboard-ui";
+import type { FastboardProps, ReplayFastboardProps } from "@zhltc/fastboard-ui";
 
-import { Fastboard as FastboardImpl, ReplayFastboard as ReplayFastboardImpl } from "@netless/fastboard-ui";
+import { Fastboard as FastboardImpl, ReplayFastboard as ReplayFastboardImpl } from "@zhltc/fastboard-ui";
 import { wrapReactComponent } from "../hooks";
 
 export type { FastboardProps, ReplayFastboardProps };

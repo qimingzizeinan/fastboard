@@ -1,6 +1,6 @@
-import type { RedoUndoProps } from "@netless/fastboard-ui";
+import type { RedoUndoProps } from "@zhltc/fastboard-ui";
 
-import { RedoUndo as RedoUndoImpl } from "@netless/fastboard-ui";
+import { RedoUndo as RedoUndoImpl } from "@zhltc/fastboard-ui";
 import { wrapReactComponent } from "../hooks";
 
 export type { RedoUndoProps };
