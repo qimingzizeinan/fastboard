@@ -647,7 +647,7 @@ export async function createFastboardCore<TEventData extends Record<string, any>
       ...ensureOfficialPlugins(joinRoomParams),
       useMultiViews: true,
       disableNewPencil: false,
-      disableMagixEventDispatchLimit: true,
+      // disableMagixEventDispatchLimit: true,
     },
     callbacks
   );
