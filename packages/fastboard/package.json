@@ -1,6 +1,6 @@
 {
   "name": "@zhltc/fastboard",
-  "version": "1.0.0-canary.23",
+  "version": "1.0.0-canary.24",
   "description": "A tiny wrapper of white-web-sdk and @netless/window-manager.",
   "main": "src/index.ts",
   "files": [
